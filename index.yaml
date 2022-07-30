@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  mssandbox:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-30T19:34:04.441335+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 25c480681dfb6e0f1a206020b8dd708bf817227b01e6e804b1c90df6b01dc07f
+    name: mssandbox
+    type: application
+    urls:
+    - https://robertpolanski.github.io/mssandbox-helm/mssandbox-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-07-30T19:34:04.44086+02:00"
