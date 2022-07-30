@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msmanager
+  namespace: app
+  labels:
+    app: msmanager
+spec:
+  replicas: {{ .Values.msmanager.replicas }}
+  selector:
+    matchLabels:
+      app: msmanager
+  template:
+    metadata:
+      labels:
+        app: msmanager
+    spec:
+      containers:
+        - name: msmanager
+          image: robertpolanski/msmanager:0.1
+          ports:
+            - containerPort: 8080
+          env:
+            - name: CALCULATOR_URL
+              value: {{ .Values.calculator.url }}
